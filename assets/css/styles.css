@@ -14,17 +14,18 @@
     width: 100%;
     border: 1px solid black;
 }
-.boxes{
+.task{
     width: 340px;
     height: 180px;
     border: 2px solid black;
+    border-radius: 8px;
     background-color: crimson;
 }
 .mainContent{
     display: flex;
     gap: 40px;
     .showTasks{
-        padding: 20px;
+        padding: 10px;
         display: flex;
         justify-content: space-evenly;
         gap: 10px;
