@@ -18,39 +18,45 @@
             <form class="d-flex w-50" role="search">
                 <input class="form-control me-2 w-100" type="search" placeholder="Search Task"
                     aria-label="Search Task" />
-                <button class="btn btn-outline-info me-2" type="submit">Search</button>
+                <button class="btn btn-outline-warning me-2" type="submit">Search</button>
             </form>
-            <button class="btn btn-outline-light" type="submit">Add tasks</button>
+            <button class="btn btn-outline-light" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Add tasks</button>
         </nav>
+
+        <!-- New Task Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Task</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div>
+                                <label for="taskDescription" class="form-label">Add your task:</label>
+                                <input type="text" id="description" name="decription" class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save Task</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <div class="hr"></div>
 
         <main class="mainContent">
             <div class="showTasks contenido">
 
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
             </div>
             <aside class="completedTasks contenido">
                 <h3>Completed Tasks</h3>
-                <ul>
-                    <li>task 1</li>
-                    <li>task 2</li>
-                    <li>task 3</li>
-                    <li>task 4</li>
-                    <li>task 5</li>
-                    <li>task 6</li>
-                </ul>
+
             </aside>
         </main>
     </div>
