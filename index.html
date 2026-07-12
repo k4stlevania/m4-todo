@@ -15,12 +15,12 @@
         <h1 class="text-center p-5">TaskFlow</h1>
 
         <nav class="navbar navbar-expand-lg ">
-            <form class="d-flex w-50" role="search">
+            <form id="navbarForm" class="d-flex w-50" role="search">
                 <input class="form-control me-2 w-100" type="search" placeholder="Search Task"
                     aria-label="Search Task" />
                 <button class="btn btn-outline-warning me-2" type="submit">Search</button>
             </form>
-            <button class="btn btn-outline-light" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Add tasks</button>
+            <button class="btn btn-outline-light" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Add new task</button>
         </nav>
 
         <!-- New Task Modal -->
@@ -32,21 +32,20 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
+                        <form id="newTaskForm">
                             <div>
                                 <label for="taskDescription" class="form-label">Add your task:</label>
-                                <input type="text" id="description" name="decription" class="form-control">
+                                <input type="text" id="taskDescription" name="taskDescription" class="form-control">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save Task</button>
                             </div>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save Task</button>
                     </div>
                 </div>
             </div>
         </div>
-
 
         <div class="hr"></div>
 

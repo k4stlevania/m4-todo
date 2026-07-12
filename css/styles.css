@@ -16,10 +16,14 @@
 }
 .task{
     width: 340px;
-    height: 180px;
+    height: fit-content;
     border: 2px solid black;
     border-radius: 8px;
     background-color: crimson;
+    color: white;
+    p{
+        padding: 10px ;
+    }
 }
 .mainContent{
     display: flex;

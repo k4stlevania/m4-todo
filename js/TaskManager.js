@@ -1,11 +1,11 @@
 
 export class TaskManager{
     constructor(){
-        this.tasks = [];
+        this.tasksList = [];
     }
 
     addTask(task){
-        this.tasks.push(task);
+        this.tasksList.push(task);
     }
 
     removeTask(taskId){
@@ -16,12 +16,12 @@ export class TaskManager{
         task.isCompleted = !task.isCompleted;
     }
 
-    editTask(){
+   /*  editTask(){
         return null;
     }
 
     searchTaskByTitle(taskTitle){
         let taskByTitle = this.tasks.filter((task) => task.title == taskTitle)
         return taskByTitle;
-    }
+    } */
 }
