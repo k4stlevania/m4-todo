@@ -1,9 +1,9 @@
 
-class TaskManager{
+export class TaskManager{
     constructor(){
         this.tasks = [];
     }
-    
+
     addTask(task){
         this.tasks.push(task);
     }
