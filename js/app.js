@@ -11,9 +11,8 @@ document.getElementById("newTaskForm").addEventListener("submit", (e) => {
     e.preventDefault();
 
     const taskDescription = document.getElementById("taskDescription").value.trim();
-
-    console.log(taskDescription);
     const taskToAdd = new Task(taskDescription);
     taskManager.addTask(taskToAdd);
     ui.renderTasks(tasksDiv);
+    console.log(taskManager.tasksList)
 })

@@ -1,22 +1,28 @@
 
-export class Ui{
-    constructor(taskManager){
+export class Ui {
+    constructor(taskManager) {
         this.taskManager = taskManager;
     }
 
-    renderTasks(parentDiv){
-       for(const task of this.taskManager.tasksList){
+    renderTasks(parentDiv) {
         let taskDiv = document.createElement("div");
-        taskDiv.classList.add("task");
-        taskDiv.innerHTML = `
+        for (const task of this.taskManager.tasksList) {
+            taskDiv.classList.add("task");
+            taskDiv.innerHTML = `
             <p>ID: ${task.id}</p>
             <p>${task.description}</p>
-            <div>
+            <div style="display:flex; justify-content: space-between;">
                 <p>Status: ${!task.isCompleted ? "Pending" : "Done"}</p>
-                <p>${task.creationDate.toLocaleDateString()}</p>
+                <p>Date: ${task.creationDate.toLocaleDateString()}</p>
+            </div>
+            <div>
+                <button class="btn btn-success">complete</button>
+                <button class="btn btn-danger">delete</button>
             </div>
         `
-        parentDiv.appendChild(taskDiv);
-       }
     }
+    
+    parentDiv.appendChild(taskDiv);
+    }
+
 }

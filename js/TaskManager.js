@@ -18,10 +18,6 @@ export class TaskManager{
 
    /*  editTask(){
         return null;
-    }
+    }*/
 
-    searchTaskByTitle(taskTitle){
-        let taskByTitle = this.tasks.filter((task) => task.title == taskTitle)
-        return taskByTitle;
-    } */
 }
