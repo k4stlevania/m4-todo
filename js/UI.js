@@ -3,11 +3,8 @@ export class Ui {
     constructor(taskManager) {
         this.taskManager = taskManager;
     }
-
-    renderTasks(parentDiv) {
-        let taskDiv = document.createElement("div");
-        for (const task of this.taskManager.tasksList) {
-            taskDiv.classList.add("task");
+    renderTasks() {
+        
             taskDiv.innerHTML = `
             <p>ID: ${task.id}</p>
             <p>${task.description}</p>
@@ -16,13 +13,10 @@ export class Ui {
                 <p>Date: ${task.creationDate.toLocaleDateString()}</p>
             </div>
             <div>
-                <button class="btn btn-success">complete</button>
-                <button class="btn btn-danger">delete</button>
+                <button class="btn btn-success completeBtn" data.id="${task.id}">complete</button>
+                <button class="btn btn-danger deleteBtn" data.id="${task.id}">delete</button>
             </div>
-        `
+            `;
     }
-    
-    parentDiv.appendChild(taskDiv);
-    }
-
+     
 }

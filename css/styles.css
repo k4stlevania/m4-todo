@@ -29,10 +29,9 @@
     .showTasks{
         padding: 10px;
         display: flex;
-        justify-content: space-evenly;
-        gap: 10px;
+        gap: 20px;
         flex-wrap: wrap;
-        flex: 6;
+        flex: 8;
     }
     .completedTasks{
         border: 2px solid black;
