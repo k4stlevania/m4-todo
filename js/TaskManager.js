@@ -6,6 +6,8 @@ export class TaskManager{
 
     addTask(task){
         this.tasksList.push(task);
+        let stringifiedListOfTasks = JSON.stringify(this.tasksList);
+        localStorage.setItem("tasksStored", stringifiedListOfTasks);
     }
 
     removeTask(taskId){

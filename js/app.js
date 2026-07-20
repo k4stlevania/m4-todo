@@ -11,6 +11,7 @@ const deleteBtn = document.querySelector(".deleteBtn");
 document.getElementById("newTaskForm").addEventListener("submit", (e) => {
     e.preventDefault();
     const taskDescription = document.getElementById("taskDescription").value.trim();
-
+    let newTask = new Task(taskDescription)
+    taskManager.addTask(newTask);
 })
-
+ui.renderTasks(allTasks)
