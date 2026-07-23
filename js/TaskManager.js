@@ -11,7 +11,7 @@ export class TaskManager{
     }
 
     removeTask(taskId){
-        this.tasks.filter((task) => task.id !== taskId);
+        this.tasksList.filter((task) => task.id !== taskId);
     }
 
     toggleStatus(task){

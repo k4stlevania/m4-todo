@@ -4,8 +4,9 @@ export class Ui {
         this.taskManager = taskManager;
     }
     renderTasks(parentDiv) {
-        let taskDiv = document.createElement("div");
+        parentDiv.innerHTML = "";
         for(const task of this.taskManager.tasksList){
+            let taskDiv = document.createElement("div");
             taskDiv.classList.add("task");
             taskDiv.innerHTML = `
             <p>ID: ${task.id}</p>
@@ -19,8 +20,8 @@ export class Ui {
                 <button class="btn btn-danger deleteBtn" data.id="${task.id}">delete</button>
             </div>
             `;
+            parentDiv.appendChild(taskDiv);
         }
-        parentDiv.appendChild(taskDiv);
     }
      
 }
