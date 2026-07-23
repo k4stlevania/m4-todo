@@ -37,7 +37,7 @@
         border: 2px solid black;
         max-height: fit-content;
         border-radius: 8px;
-        padding: 10px;
-        flex: 2;
+        padding: 15px;
+        flex: 4;
     }
 }

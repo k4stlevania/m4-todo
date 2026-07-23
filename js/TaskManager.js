@@ -6,8 +6,8 @@ export class TaskManager{
 
     addTask(task){
         this.tasksList.push(task);
-        let stringifiedListOfTasks = JSON.stringify(this.tasksList);
-        localStorage.setItem("tasksStored", stringifiedListOfTasks);
+        /* let stringifiedListOfTasks = JSON.stringify(this.tasksList);
+        localStorage.setItem("tasksStored", stringifiedListOfTasks); */
     }
 
     removeTask(taskId){
@@ -17,9 +17,5 @@ export class TaskManager{
     toggleStatus(task){
         task.isCompleted = !task.isCompleted;
     }
-
-   /*  editTask(){
-        return null;
-    }*/
 
 }
